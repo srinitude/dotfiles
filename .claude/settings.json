@@ -46,10 +46,6 @@
         "hooks": [
           {
             "type": "command",
-            "command": "uv run ~/.claude/hooks/play_audio.py"
-          },
-          {
-            "type": "command",
             "command": "uv run ~/.claude/hooks/macos_notification.py"
           }
         ]
@@ -59,10 +55,6 @@
       {
         "matcher": "",
         "hooks": [
-          {
-            "type": "command",
-            "command": "uv run ~/.claude/hooks/play_audio.py"
-          },
           {
             "type": "command",
             "command": "uv run ~/.claude/hooks/macos_notification.py"
