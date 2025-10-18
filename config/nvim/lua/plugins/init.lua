@@ -1,0 +1,52 @@
+return {
+  {
+    "nvim-tree/nvim-tree.lua",
+    dependencies = {
+      "nvim-tree/nvim-web-devicons",
+    },
+    config = function()
+      require("nvim-tree").setup {
+        view = {
+          width = 30,
+          side = "right",
+          relativenumber = true,
+          number = true,
+        },
+      }
+    end,
+  },
+  {
+    "stevearc/conform.nvim",
+    -- event = 'BufWritePre', -- uncomment for format on save
+    opts = require "configs.conform",
+  },
+
+  -- These are some examples, uncomment them if you want to see them work!
+  {
+    "neovim/nvim-lspconfig",
+    config = function()
+      require "configs.lspconfig"
+    end,
+  },
+
+  {
+  	"nvim-treesitter/nvim-treesitter",
+    config = function()
+      require('nvim-treesitter.configs').setup {
+        ensure_installed = {
+          "markdown", "markdown_inline",
+          "vim", "lua", "vimdoc",
+          "html", "css", "hcl", "toml", "hurl",
+          "javascript", "typescript", "tsx", "svelte"
+        },
+        highlight = {
+          enable = true
+        }
+      }
+    end,
+  },
+
+  {
+    "numToStr/Comment.nvim",
+  },
+}
